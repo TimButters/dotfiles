@@ -33,13 +33,13 @@ zstyle ':vcs_info:git*:*' check-for-changes true
 precmd() { vcs_info }
 
 zstyle ':vcs_info:git*' actionformats "%s  %r/%S %b %m%u%c "
-zstyle ':vcs_info:git*' formats "%{$fg[red]%}%b %{$fg_bold[red]%}%m%u%c%{$reset_color%} "
+zstyle ':vcs_info:git*' formats "%b %{$fg_bold[red]%}%m%u%c%{$reset_color%} "
 
 # Prompt Settings
 autoload -U colors && colors
 setopt prompt_subst
 
-PROMPT='%{$fg_bold[black]%}%n@%m%{$reset_color%} %{$fg_bold[yellow]%}%2~%{$reset_color%} ${vcs_info_msg_0_}%{$fg[black]%}%B%#%b %{$reset_color%}'
+PROMPT='%{$fg_bold[black]%}%n@%m%{$reset_color%} %{$fg_bold[yellow]%}%2~%{$fg[red]%} ${vcs_info_msg_0_}%{$fg[black]%}%B%#%b %{$reset_color%}'
 RPROMPT='%{$fg_no_bold[yellow]%}%D{%H:%M:%S %d-%m-%Y}%{$reset_color%}'
 
 # My Aliases

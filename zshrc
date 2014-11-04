@@ -30,7 +30,6 @@ source ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$VENDOR-$OSTYPE
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:git*:*' get-revision true
 zstyle ':vcs_info:git*:*' check-for-changes true
-zstyle ':vcs_info:git*+set-message:*' hooks git-st
 precmd() { vcs_info }
 
 zstyle ':vcs_info:git*' actionformats "%s  %r/%S %b %m%u%c "

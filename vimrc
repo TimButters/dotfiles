@@ -17,13 +17,13 @@ endif
 syntax enable
 colo blazer
 " colo distinguished
-:noremap j gj
-:noremap k gk
+noremap j gj
+noremap k gk
 set backupdir=~/.vim/backup
 set tabstop=4
-:inoremap { {}<++><Esc>hhhhi
-:inoremap ( ()<++><Esc>hhhhi
-:inoremap [ []<++><Esc>hhhhi
+inoremap { {}<++><Esc>hhhhi
+inoremap ( ()<++><Esc>hhhhi
+inoremap [ []<++><Esc>hhhhi
 
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0

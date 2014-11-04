@@ -1,0 +1,11 @@
+#!/bin/bash
+
+FILES=(Xresources bashrc zshrc vimrc vim screenrc)
+
+for f in ${FILES[*]}; do
+		if [[ -e ~/.${f} ]]; then
+				mv ~/.${f} ~/.${f}_backup
+				echo "Saving existing .${f} to .${f}_backup"
+		fi
+		ln -s ${PWD}/${f} ~/.${f}
+done

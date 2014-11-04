@@ -30,16 +30,17 @@ source ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$VENDOR-$OSTYPE
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:git*:*' get-revision true
 zstyle ':vcs_info:git*:*' check-for-changes true
+zstyle ':vcs_info:git*+set-message:*' hooks git-st
 precmd() { vcs_info }
 
 zstyle ':vcs_info:git*' actionformats "%s  %r/%S %b %m%u%c "
-zstyle ':vcs_info:git*' formats "%b %{$fg_bold[red]%}%m%u%c%{$reset_color%} "
+zstyle ':vcs_info:git*' formats "%b %B%m%u%c "
 
 # Prompt Settings
 autoload -U colors && colors
 setopt prompt_subst
 
-PROMPT='%{$fg_bold[black]%}%n@%m%{$reset_color%} %{$fg_bold[yellow]%}%2~%{$fg[red]%} ${vcs_info_msg_0_}%{$fg[black]%}%B%#%b %{$reset_color%}'
+PROMPT='%{$fg_bold[black]%}%n@%m%{$reset_color%} %{$fg_bold[yellow]%}%2~%{$fg_no_bold[red]%} ${vcs_info_msg_0_}%{$fg[black]%}%B%#%b %{$reset_color%}'
 RPROMPT='%{$fg_no_bold[yellow]%}%D{%H:%M:%S %d-%m-%Y}%{$reset_color%}'
 
 # My Aliases

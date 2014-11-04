@@ -17,8 +17,8 @@ endif
 syntax enable
 colo blazer
 " colo distinguished
-:map <C-k> gk
-:map <C-j> gj
+:noremap j gj
+:noremap k gk
 set backupdir=~/.vim/backup
 set tabstop=4
 :inoremap { {}<++><Esc>hhhhi

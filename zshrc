@@ -4,6 +4,7 @@ export EDITOR=/usr/bin/vim
 eval "$(dircolors -b)" && export ZLS_COLORS=$LS_COLORS
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 bindkey -e
+unset MULTIBYTE
 
 # ZSH Modules
 autoload -Uz compinit promptinit zkbd vcs_info

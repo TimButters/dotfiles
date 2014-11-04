@@ -34,5 +34,6 @@ Configuration for vim enabling syntax highlighting, various settings for source 
 - Ctrl-P
 - NERDTree
 - vim-latexsuite
+
 Appropriate colour schemes are included in the vim folder.
 

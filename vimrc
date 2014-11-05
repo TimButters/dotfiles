@@ -100,8 +100,9 @@ filetype plugin indent on
 augroup vimrcEx
 au!
 
-au BufRead,BufNewFile *.txt		setfiletype text
-au BufRead,BufNewFile *.tex		setfiletype tex
+au BufRead,BufNewFile *.txt		set filetype=text
+au BufRead,BufNewFile *.md		set filetype=text
+au BufRead,BufNewFile *.tex		set filetype=tex
 
 " For all text files set 'textwidth' to 78 characters.
 autocmd FileType text,txt setlocal textwidth=78 tabstop=4 formatoptions+=t spelllang=en_gb spell

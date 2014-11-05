@@ -7,5 +7,10 @@ for f in ${FILES[*]}; do
 				mv ~/.${f} ~/.${f}_backup
 				echo "Saving existing .${f} to .${f}_backup"
 		fi
+		
 		ln -s ${PWD}/${f} ~/.${f}
+		
+		if [[ $f == "vim" ]]; then
+				mkdir ~/.vim/backup
+		fi
 done

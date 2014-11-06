@@ -71,9 +71,9 @@ function +vi-git-st() {
 				(( $behind )) && gitstatus+=( "${red}-${behind}${black}" )
 
 				if [[ -z $ahead ]] && [[ -z $behind ]]; then
-						hook_com[branch]="${hook_com[branch]} ${black}[${remote} ${(j:/:)gitstatus}]${red}"
-				else
 						hook_com[branch]="${hook_com[branch]}${red}"
+				else
+						hook_com[branch]="${hook_com[branch]} ${black}[${remote} ${(j:/:)gitstatus}]${red}"
 				fi
 		fi
 }

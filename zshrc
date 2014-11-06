@@ -35,7 +35,7 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-st
 precmd() { vcs_info }
 
 #zstyle ':vcs_info:git*' actionformats "%s  %r/%S %b %m%u%c "
-zstyle ':vcs_info:git*' formats "%b %m%u%c "
+zstyle ':vcs_info:git*' formats "%b %m%u%c"
 
 # Prompt Settings
 autoload -U colors && colors

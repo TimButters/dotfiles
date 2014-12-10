@@ -21,9 +21,13 @@ noremap j gj
 noremap k gk
 set backupdir=~/.vim/backup
 set tabstop=4
-inoremap { {}<++><Esc>hhhhi
-inoremap ( ()<++><Esc>hhhhi
-inoremap [ []<++><Esc>hhhhi
+inoremap {} {}<++><Esc>hhhhi
+inoremap () ()<++><Esc>hhhhi
+inoremap [] []<++><Esc>hhhhi
+set exrc
+set secure
+
+let g:ycm_global_ycm_extra_conf = "~/.vim/ycm_extra_conf.py"
 
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0

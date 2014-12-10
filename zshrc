@@ -5,6 +5,7 @@ eval "$(dircolors -b)" && export ZLS_COLORS=$LS_COLORS
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 bindkey -e
 unset MULTIBYTE
+export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
 # ZSH Modules
 autoload -Uz compinit promptinit zkbd vcs_info
@@ -85,4 +86,8 @@ alias ll='ls -lht'
 alias la='ls -a'
 alias ..='cd ../'
 alias ...='cd ../../'
+
+hash -d sabisu=~/Documents/KTP/Sabisu
+hash -d alarms=~/Documents/KTP/Sabisu/Algorithms/AlarmManagement
+hash -d d3=~/Documents/KTP/Sabisu/Algorithms/Javascript/d3
 

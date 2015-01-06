@@ -29,6 +29,7 @@ flags = [
     '-isystem', '/System/Library/Frameworks/Python.framework/Headers',
     '-isystem', '/usr/include',
     '-isystem', '/usr/include/eigen3',
+    '-isystem', '/usr/lib/gcc/x86_64-unknown-linux-gnu/4.9.2/include/',
     '-I', 'include'
     '-I.'
 ]

@@ -28,7 +28,7 @@ set exrc
 set secure
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/ycm_extra_conf.py"
-"let g:ycm_extra_conf_globlist = ['~/Documents/KTP/Sabisu/Algorithms/AlarmManagement/*']
+let g:ycm_extra_conf_globlist = ['~/Documents/KTP/Sabisu/Algorithms/*']
 "let g:ycm_confirm_extra_conf = 0
 
 let g:syntastic_check_on_open = 0

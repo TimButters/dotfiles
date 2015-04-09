@@ -21,9 +21,9 @@ noremap j gj
 noremap k gk
 set backupdir=~/.vim/backup
 set tabstop=4
-inoremap {} {}<++><Esc>hhhhi
-inoremap () ()<++><Esc>hhhhi
-inoremap [] []<++><Esc>hhhhi
+"inoremap {} {}<++><Esc>hhhhi
+"inoremap () ()<++><Esc>hhhhi
+"inoremap [] []<++><Esc>hhhhi
 set exrc
 set secure
 
@@ -41,7 +41,7 @@ let g:syntastic_javascript_checkers = ["gjslint"]
 let g:syntastic_cpp_compiler = "g++"
 let g:syntastic_cpp_compiler_options = " -std=c++11"
 let g:syntastic_tex_chktex_args = " -n 1"
-" let g:syntastic_java_checkers = []
+let g:syntastic_python_checkers = []
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*

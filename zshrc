@@ -2,7 +2,11 @@
 DE=openbox
 export EDITOR=/usr/bin/vim
 eval "$(dircolors -b)" && export ZLS_COLORS=$LS_COLORS
-xseticon -id "$WINDOWID" /usr/share/icons/AwOkenWhite/clear/128x128/apps/terminal2.png
+
+if [[ $HOST == timb-asus ]]; then
+		xseticon -id "$WINDOWID" /usr/share/icons/AwOkenWhite/clear/128x128/apps/terminal2.png
+fi
+
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 bindkey -e
 unset MULTIBYTE

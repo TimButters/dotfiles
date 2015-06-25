@@ -3,9 +3,9 @@ DE=openbox
 export EDITOR=/usr/bin/vim
 eval "$(dircolors -b)" && export ZLS_COLORS=$LS_COLORS
 
-if [[ "$HOST" = timb-asus ]]; then
-		xseticon -id "$WINDOWID" /usr/share/icons/AwOkenWhite/clear/128x128/apps/terminal2.png
-fi
+#if [[ "$HOST" = timb-asus ]]; then
+# 		xseticon -id "$WINDOWID" /usr/share/icons/AwOkenWhite/clear/128x128/apps/terminal2.png
+#fi
 
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 bindkey -e
@@ -49,7 +49,7 @@ setopt prompt_subst
 
 # Auto cd options
 setopt autocd
-cdpath=(~ ~/Documents/KTP/Sabisu/Algorithms/CPP)
+#cdpath=(~ ~/Documents/KTP/Sabisu/Algorithms/CPP)
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*:descriptions' format %F{green}%d%f
 
@@ -104,6 +104,12 @@ hash -d alarms=~/Documents/KTP/Sabisu/Algorithms/AlarmManagement
 hash -d prediction=~/Documents/KTP/Sabisu/Algorithms/PredictionSystem
 hash -d d3=~/Documents/KTP/Sabisu/Algorithms/Javascript/d3
 hash -d cpp=~/Documents/KTP/Sabisu/Algorithms/CPP
+hash -d python=~/Documents/KTP/Sabisu/Algorithms/Python
+
+# Automatic transparency for xterm
+#if [[ -n "$XTERM_VERSION" ]]; then
+#		transset-df -a >/dev/null
+#fi
 
 # Syntax Highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -2,6 +2,11 @@
 DE=openbox
 export EDITOR=/usr/bin/vim
 eval "$(dircolors -b)" && export ZLS_COLORS=$LS_COLORS
+
+#if [[ "$HOST" = timb-asus ]]; then
+# 		xseticon -id "$WINDOWID" /usr/share/icons/AwOkenWhite/clear/128x128/apps/terminal2.png
+#fi
+
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 bindkey -e
 unset MULTIBYTE
@@ -29,7 +34,7 @@ source ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$VENDOR-$OSTYPE
 [[ -n ${key[Right]} ]] && bindkey "${key[Right]}" forward-char
 
 # Collect Git Info and Set Format String
-zstyle ':vcs_info:*' enable git svn
+zstyle ':vcs_info:*' enable git svn hg
 zstyle ':vcs_info:git*:*' get-revision true
 zstyle ':vcs_info:git*:*' check-for-changes true
 zstyle ':vcs_info:git*+set-message:*' hooks git-st
@@ -41,6 +46,13 @@ zstyle ':vcs_info:git*' formats "%b %m%u%c"
 # Prompt Settings
 autoload -U colors && colors
 setopt prompt_subst
+
+# Auto cd options
+setopt autocd
+#cdpath=(~ ~/Documents/KTP/Sabisu/Algorithms/CPP)
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:descriptions' format %F{green}%d%f
+
 
 black="%{$fg_bold[black]%}"
 yellow="%{$fg_bold[yellow]%}"
@@ -89,5 +101,15 @@ alias ...='cd ../../'
 
 hash -d sabisu=~/Documents/KTP/Sabisu
 hash -d alarms=~/Documents/KTP/Sabisu/Algorithms/AlarmManagement
+hash -d prediction=~/Documents/KTP/Sabisu/Algorithms/PredictionSystem
 hash -d d3=~/Documents/KTP/Sabisu/Algorithms/Javascript/d3
+hash -d cpp=~/Documents/KTP/Sabisu/Algorithms/CPP
+hash -d python=~/Documents/KTP/Sabisu/Algorithms/Python
 
+# Automatic transparency for xterm
+#if [[ -n "$XTERM_VERSION" ]]; then
+#		transset-df -a >/dev/null
+#fi
+
+# Syntax Highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

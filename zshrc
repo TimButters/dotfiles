@@ -99,17 +99,14 @@ alias la='ls -a'
 alias ..='cd ../'
 alias ...='cd ../../'
 
-hash -d sabisu=~/Documents/KTP/Sabisu
-hash -d alarms=~/Documents/KTP/Sabisu/Algorithms/AlarmManagement
-hash -d prediction=~/Documents/KTP/Sabisu/Algorithms/PredictionSystem
-hash -d d3=~/Documents/KTP/Sabisu/Algorithms/Javascript/d3
-hash -d cpp=~/Documents/KTP/Sabisu/Algorithms/CPP
-hash -d python=~/Documents/KTP/Sabisu/Algorithms/Python
+if [[ "$HOST" = timb-asus ]]; then
+		hash -d sabisu=~/Documents/KTP/Sabisu
+		hash -d alarms=~/Documents/KTP/Sabisu/Algorithms/AlarmManagement
+		hash -d prediction=~/Documents/KTP/Sabisu/Algorithms/PredictionSystem
+		hash -d d3=~/Documents/KTP/Sabisu/Algorithms/Javascript/d3
+		hash -d cpp=~/Documents/KTP/Sabisu/Algorithms/CPP
+		hash -d python=~/Documents/KTP/Sabisu/Algorithms/Python
 
-# Automatic transparency for xterm
-#if [[ -n "$XTERM_VERSION" ]]; then
-#		transset-df -a >/dev/null
-#fi
-
-# Syntax Highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+		# Syntax Highlighting
+		source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi

@@ -54,6 +54,9 @@ let g:syntastic_mode_map={ 'mode': 'active',
 
 map <C-n> :NERDTreeToggle<CR>
 
+let g:pymode_rope_lookup_project = 0
+let g:pymode_rope_complete_on_dot = 0
+
 
 " vim-latexsuite
 set grepprg=grep\ -nH\ $*

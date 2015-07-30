@@ -118,7 +118,7 @@ au BufRead,BufNewFile *.tex		set filetype=tex
 " For all text files set 'textwidth' to 78 characters.
 autocmd FileType text,txt setlocal textwidth=78 tabstop=4 formatoptions+=t spelllang=en_gb spell
 
-autocmd FileType tex setlocal textwidth=78 formatoptions+=t spelllang=en_gb spell
+autocmd FileType tex setlocal tabstop=1 sw=2 textwidth=78 formatoptions+=t spelllang=en_gb spell
 
 autocmd FileType cpp,cc,cxx,html,javascript setlocal tabstop=2 shiftwidth=2 expandtab nu
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab nu

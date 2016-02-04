@@ -98,6 +98,7 @@ alias ll='ls -lht'
 alias la='ls -a'
 alias ..='cd ../'
 alias ...='cd ../../'
+alias glg='git log --oneline --decorate --graph'
 
 if [[ "$HOST" = timb-asus ]]; then
 		hash -d sabisu=~/Documents/KTP/Sabisu

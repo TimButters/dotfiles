@@ -17,8 +17,8 @@ endif
 syntax enable
 colo blazer
 " colo distinguished
-noremap j gj
-noremap k gk
+:map J gj
+:map K gk
 set backupdir=~/.vim/backup
 set tabstop=4
 "inoremap {} {}<++><Esc>hhhhi
@@ -27,11 +27,12 @@ set tabstop=4
 set exrc
 set secure
 
-let g:ycm_global_ycm_extra_conf = "~/.vim/ycm_extra_conf.py"
-let g:ycm_extra_conf_globlist = ['~/Documents/KTP/Sabisu/Algorithms/*']
-
-let g:ycm_extra_conf_globlist = ['~/Projects/*']
-let g:ycm_confirm_extra_conf = 0
+"let g:ycm_global_ycm_extra_conf = "~/.vim/ycm_extra_conf.py"
+"let g:ycm_extra_conf_globlist = ['~/Documents/KTP/Sabisu/Algorithms/*']
+"
+"let g:ycm_extra_conf_globlist = ['~/Projects/*']
+"let g:ycm_confirm_extra_conf = 0
+let g:clang_cpp_options='-std=c++11'
 
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
@@ -121,9 +122,10 @@ autocmd FileType text,txt setlocal textwidth=78 tabstop=4 formatoptions+=t spell
 autocmd FileType tex setlocal tabstop=1 sw=2 textwidth=78 formatoptions+=t spelllang=en_gb spell
 
 autocmd FileType cpp,cc,cxx,html,javascript setlocal tabstop=2 shiftwidth=2 expandtab nu
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab nu
+autocmd FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 autocmd FileType cs setlocal tabstop=4 shiftwidth=4 expandtab nu
 autocmd FileType c setlocal tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab nu
+autocmd FileType sh setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab nu
 
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler

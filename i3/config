@@ -175,16 +175,18 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+		tray_output primary
 }
 
 # Applications on Startup
-exec setxkbmap -layout gb -model logitech_g15 &
-exec /home/tim/scripts/monitor-projector.sh &
-exec xmodmap ~/.Xmodmap &
-exec compton -b &
-exec udiskie --tray &
-exec nitrogen --restore &
-exec unclutter &
-exec cmst -m -i &
-exec solaar &
-exec dropboxd &
+# exec setxkbmap -layout gb -model logitech_g15 &
+exec --no-startup-id xmodmap /home/tim/.Xmodmap
+exec --no-startup-id /home/tim/scripts/monitor-projector.sh &
+exec --no-startup-id compton -b &
+exec --no-startup-id udiskie --tray &
+exec --no-startup-id nitrogen --restore &
+exec --no-startup-id unclutter &
+exec --no-startup-id cmst -m -i &
+exec --no-startup-id solaar &
+exec --no-startup-id dropboxd &
+exec --no-startup-id skype &
